@@ -52,6 +52,68 @@ module.exports = function(){
             { id: 7, programName: "อุปกรณ์" },
             { id: 8, programName: "อบรม" },
             { id: 9, programName: "อื่นๆ" }
-        ]
+        ],
+        pritProjScope: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: _.random(0,10),
+                scopeDetail: faker.lorem.paragraph()
+            }
+        }),
+        projMethod: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: _.random(0,10),
+                methodDetail: faker.lorem.paragraph()
+            }
+        }),
+        projLanguage: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: _.random(0,10),
+                languageDetail: faker.address.country()
+            }
+        }),
+        projTools: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: _.random(0,10),
+                toolsDetail: faker.lorem.sentence()
+            }
+        }),
+        projCondition: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: _.random(0,10),
+                conditionDetail: faker.lorem.sentence()
+            }
+        }),
+        projDelivery: _.times(20, function(n){
+            return {
+                id: n,
+                period: _.random(0,10),
+                deliverDate: faker.date.future(),
+                deliverPercenContract: function(){
+                    var percent = _.range(10, 100, 10);
+                    return percent[_.random(0, percent.length-1)];
+                }(),
+                deliverDetail: faker.lorem.sentence()
+            }
+        }),
+        projLimit: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: _.random(0,10),
+                limitDetail: faker.lorem.sentence()
+            }
+        }),
+        projMonitor: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: _.random(0,10),
+                moitorType: _.random(1, 3),
+                monitorDetail: faker.lorem.sentence()
+            }
+        }),
     }
 }
