@@ -4,7 +4,7 @@ module.exports = function(){
     return {
         pri: _.times(10, function(n){
             return {
-                id: n,
+                id: ''+n,
                 projYear: _.random(2557, 2559),
                 projOwnerOrg: faker.company.companyName(),
                 projCode: "ID"+_.random(100000, 200000),
@@ -24,7 +24,7 @@ module.exports = function(){
         }),
         staffResource: _.times(4, function(n){
             return {
-                id: n,
+                id: ''+n,
                 projResourceRef: _.random(0.0, 10.0),
                 position: faker.company.companySuffix(),
                 empNo: '00'+_.random(1000, 9999),
@@ -55,42 +55,42 @@ module.exports = function(){
         ],
         pritProjScope: _.times(20, function(n){
             return {
-                id: n,
-                projCode: _.random(0,10),
+                id: ''+n,
+                projCode: ''+_.random(0,10),
                 scopeDetail: faker.lorem.paragraph()
             }
         }),
         projMethod: _.times(20, function(n){
             return {
-                id: n,
-                projCode: _.random(0,10),
+                id: ''+n,
+                projCode: ''+_.random(0,10),
                 methodDetail: faker.lorem.paragraph()
             }
         }),
         projLanguage: _.times(20, function(n){
             return {
-                id: n,
-                projCode: _.random(0,10),
+                id: ''+n,
+                projCode: ''+_.random(0,10),
                 languageDetail: faker.address.country()
             }
         }),
         projTools: _.times(20, function(n){
             return {
-                id: n,
-                projCode: _.random(0,10),
+                id: ''+n,
+                projCode: ''+_.random(0,10),
                 toolsDetail: faker.lorem.sentence()
             }
         }),
         projCondition: _.times(20, function(n){
             return {
-                id: n,
-                projCode: _.random(0,10),
+                id: ''+n,
+                projCode: ''+_.random(0,10),
                 conditionDetail: faker.lorem.sentence()
             }
         }),
         projDelivery: _.times(20, function(n){
             return {
-                id: n,
+                id: ''+n,
                 period: _.random(0,10),
                 deliverDate: faker.date.future(),
                 deliverPercenContract: function(){
@@ -102,15 +102,15 @@ module.exports = function(){
         }),
         projLimit: _.times(20, function(n){
             return {
-                id: n,
-                projCode: _.random(0,10),
+                id: ''+n,
+                projCode: ''+_.random(0,10),
                 limitDetail: faker.lorem.sentence()
             }
         }),
         projMonitor: _.times(20, function(n){
             return {
-                id: n,
-                projCode: _.random(0,10),
+                id: ''+n,
+                projCode: ''+_.random(0,10),
                 moitorType: _.random(1, 3),
                 monitorDetail: faker.lorem.sentence()
             }
