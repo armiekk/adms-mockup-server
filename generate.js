@@ -60,35 +60,35 @@ module.exports = function(){
         pritProjScope: _.times(30, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, priLength)],
+                projCode: projCode[_.random(0, priLength-1)],
                 scopeDetail: faker.lorem.paragraph()
             }
         }),
         projMethod: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, priLength)],
+                projCode: projCode[_.random(0, priLength-1)],
                 methodDetail: faker.lorem.paragraph()
             }
         }),
         projLanguage: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, priLength)],
+                projCode: projCode[_.random(0, priLength-1)],
                 languageDetail: faker.address.country()
             }
         }),
         projTools: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, priLength)],
+                projCode: projCode[_.random(0, priLength-1)],
                 toolsDetail: faker.lorem.sentence()
             }
         }),
         projCondition: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, priLength)],
+                projCode: projCode[_.random(0, priLength-1)],
                 conditionDetail: faker.lorem.sentence()
             }
         }),
@@ -107,14 +107,14 @@ module.exports = function(){
         projLimit: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, priLength)],
+                projCode: projCode[_.random(0, priLength-1)],
                 limitDetail: faker.lorem.sentence()
             }
         }),
         projMonitor: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, priLength)],
+                projCode: projCode[_.random(0, priLength-1)],
                 moitorType: _.random(1, 3),
                 monitorDetail: faker.lorem.sentence()
             }
