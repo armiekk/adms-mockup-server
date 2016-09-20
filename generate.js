@@ -1,13 +1,16 @@
 module.exports = function(){
     var faker = require('faker');
     var _ = require('lodash');
+    var projCode = _.times(10, function(n){
+        return "ID"+_.random(100000, 200000);
+    });
     return {
         pri: _.times(10, function(n){
             return {
                 id: n,
                 projYear: _.random(2557, 2559),
                 projOwnerOrg: faker.company.companyName(),
-                projCode: "ID"+_.random(100000, 200000),
+                projCode: projCode[n],
                 projType: _.random(1, 3),
                 projName: faker.lorem.sentence(),
                 projOrgName: faker.company.companySuffix(),
@@ -53,38 +56,38 @@ module.exports = function(){
             { id: 8, programName: "อบรม" },
             { id: 9, programName: "อื่นๆ" }
         ],
-        pritProjScope: _.times(20, function(n){
+        pritProjScope: _.times(30, function(n){
             return {
                 id: n,
-                projCode: _.random(0,10),
+                projCode: projCode[_.random(0, n)],
                 scopeDetail: faker.lorem.paragraph()
             }
         }),
         projMethod: _.times(20, function(n){
             return {
                 id: n,
-                projCode: _.random(0,10),
+                projCode: projCode[_.random(0, n)],
                 methodDetail: faker.lorem.paragraph()
             }
         }),
         projLanguage: _.times(20, function(n){
             return {
                 id: n,
-                projCode: _.random(0,10),
+                projCode: projCode[_.random(0, n)],
                 languageDetail: faker.address.country()
             }
         }),
         projTools: _.times(20, function(n){
             return {
                 id: n,
-                projCode: _.random(0,10),
+                projCode: projCode[_.random(0, n)],
                 toolsDetail: faker.lorem.sentence()
             }
         }),
         projCondition: _.times(20, function(n){
             return {
                 id: n,
-                projCode: _.random(0,10),
+                projCode: projCode[_.random(0, n)],
                 conditionDetail: faker.lorem.sentence()
             }
         }),
@@ -103,14 +106,14 @@ module.exports = function(){
         projLimit: _.times(20, function(n){
             return {
                 id: n,
-                projCode: _.random(0,10),
+                projCode: projCode[_.random(0, n)],
                 limitDetail: faker.lorem.sentence()
             }
         }),
         projMonitor: _.times(20, function(n){
             return {
                 id: n,
-                projCode: _.random(0,10),
+                projCode: projCode[_.random(0, n)],
                 moitorType: _.random(1, 3),
                 monitorDetail: faker.lorem.sentence()
             }
