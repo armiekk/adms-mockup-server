@@ -1,7 +1,8 @@
 module.exports = function(){
     var faker = require('faker');
     var _ = require('lodash');
-    var projCode = _.times(10, function(n){
+    var priLength = 10;
+    var projCode = _.times(priLength, function(n){
         return "ID"+_.random(100000, 200000);
     });
     return {
@@ -59,35 +60,35 @@ module.exports = function(){
         pritProjScope: _.times(30, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, n)],
+                projCode: projCode[_.random(0, priLength)],
                 scopeDetail: faker.lorem.paragraph()
             }
         }),
         projMethod: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, n)],
+                projCode: projCode[_.random(0, priLength)],
                 methodDetail: faker.lorem.paragraph()
             }
         }),
         projLanguage: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, n)],
+                projCode: projCode[_.random(0, priLength)],
                 languageDetail: faker.address.country()
             }
         }),
         projTools: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, n)],
+                projCode: projCode[_.random(0, priLength)],
                 toolsDetail: faker.lorem.sentence()
             }
         }),
         projCondition: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, n)],
+                projCode: projCode[_.random(0, priLength)],
                 conditionDetail: faker.lorem.sentence()
             }
         }),
@@ -106,14 +107,14 @@ module.exports = function(){
         projLimit: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, n)],
+                projCode: projCode[_.random(0, priLength)],
                 limitDetail: faker.lorem.sentence()
             }
         }),
         projMonitor: _.times(20, function(n){
             return {
                 id: n,
-                projCode: projCode[_.random(0, n)],
+                projCode: projCode[_.random(0, priLength)],
                 moitorType: _.random(1, 3),
                 monitorDetail: faker.lorem.sentence()
             }
