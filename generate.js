@@ -95,6 +95,7 @@ module.exports = function(){
         projDelivery: _.times(20, function(n){
             return {
                 id: n,
+                projCode: projCode[_.random(0, priLength-1)],
                 period: _.random(0,10),
                 deliverDate: faker.date.future(),
                 deliverPercenContract: function(){
@@ -115,9 +116,54 @@ module.exports = function(){
             return {
                 id: n,
                 projCode: projCode[_.random(0, priLength-1)],
-                moitorType: _.random(1, 3),
+                monitorType: _.random(1, 3),
                 monitorDetail: faker.lorem.sentence()
             }
         }),
+        projCustomer: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: projCode[_.random(0, priLength-1)],
+                fullName: faker.name.firstName()+' '+faker.name.lastName(),
+                projPosition: faker.lorem.words(),
+                orgPosition: faker.lorem.sentence(),
+                tel: faker.phone.phoneNumberFormat(),
+                email: faker.internet.email(),
+                orgName: faker.company.companyName()
+            }
+        }),
+        projAccessories: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: projCode[_.random(0, priLength-1)],
+                accName: faker.lorem.words(),
+                accQuantity: _.random(0, 100)
+            }
+        }),
+        projTrain: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: projCode[_.random(0, priLength-1)],
+                trainCourse: faker.lorem.sentences(),
+                trainDate: _.random(1, 30),
+                personAmount: _.random(1, 30)
+            }
+        }),
+        projOther: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: projCode[_.random(0, priLength-1)],
+                otherDetail: faker.lorem.sentences()
+            }
+        }),
+        projSystems: _.times(20, function(n){
+            return {
+                id: n,
+                projCode: projCode[_.random(0, priLength-1)],
+                systemAbbr: faker.lorem.words(),
+                systemName: faker.lorem.sentence(),
+                systemDetail: faker.lorem.sentences()
+            }
+        })
     }
 }
